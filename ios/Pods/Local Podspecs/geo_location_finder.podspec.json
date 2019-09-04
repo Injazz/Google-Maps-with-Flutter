@@ -1,0 +1,26 @@
+{
+  "name": "geo_location_finder",
+  "version": "1.0.8",
+  "summary": "Flutter plugin for getting accurate locations on the Android & iOS devices.",
+  "description": "A new Flutter geo location finder plugin.",
+  "homepage": "https://www.aeologic.com/",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Your Company": "support@aeologic.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "8.0"
+  }
+}
