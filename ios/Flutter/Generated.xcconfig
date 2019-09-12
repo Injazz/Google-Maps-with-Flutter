@@ -1,7 +1,7 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Users/ios/flutter
-FLUTTER_APPLICATION_PATH=/Users/ios/Documents/googlemaptest
-FLUTTER_TARGET=/Users/ios/Documents/googlemaptest/lib/main.dart
+FLUTTER_APPLICATION_PATH=/Users/ios/Google-Maps-with-Flutter
+FLUTTER_TARGET=/Users/ios/Google-Maps-with-Flutter/lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
 FLUTTER_FRAMEWORK_DIR=/Users/ios/flutter/bin/cache/artifacts/engine/ios

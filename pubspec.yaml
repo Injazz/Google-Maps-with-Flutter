@@ -33,6 +33,9 @@ dependencies:
   fluster: ^1.1.2
   image: ^2.1.4
   meta: ^1.1.6
+  bloc: ^0.15.0
+  flutter_bloc: ^0.21.0
+  equatable: ^0.5.1
   
 dev_dependencies:
   flutter_test:
