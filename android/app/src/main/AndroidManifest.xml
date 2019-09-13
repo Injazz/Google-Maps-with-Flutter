@@ -13,7 +13,7 @@
         android:label="googlemaptest"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="АПИ КЛЮЧ ЗАБЫЛ?"/>
+               android:value="AIzaSyDh0sJWMHH3VSzXbyiRUfOBnJYN6zHCHvo"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

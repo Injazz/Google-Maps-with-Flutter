@@ -35,6 +35,10 @@ class MapMovementStopped extends MapState {
 }
 
 class MapMarkerTapped extends MapState {
+  final double zoom;
+
+  MapMarkerTapped({@required this.zoom}) : super([zoom]);
+  
   @override
   String toString() => 'MapMarkerTapped'; 
 }

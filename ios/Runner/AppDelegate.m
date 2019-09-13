@@ -6,7 +6,7 @@
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [GMSServices provideAPIKey:@"АПИ КЛЮЧ ЗАБЫЛ?"];
+  [GMSServices provideAPIKey:@"AIzaSyDh0sJWMHH3VSzXbyiRUfOBnJYN6zHCHvo"];
   [GeneratedPluginRegistrant registerWithRegistry:self];
   // Override point for customization after application launch.
   return [super application:application didFinishLaunchingWithOptions:launchOptions];

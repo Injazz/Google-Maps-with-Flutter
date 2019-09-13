@@ -30,12 +30,13 @@ class MapPageState extends State<MapPage> {
   @override
   void initState() {
     super.initState();
+    
   }
 
   @override
   void didChangeDependencies() {
     _bloc = Provider.of<MapBloc>(context);
-
+    _bloc.dispatch(MapLoad());
     super.didChangeDependencies();
   }
 
@@ -109,17 +110,17 @@ class MapPageState extends State<MapPage> {
     mapController = controller;
     moveCameraToOurPosition();
     _controller.complete(mapController);
-    _bloc.dispatch(MapLoad());
+    
   }
 
     // May be called as often as every frame, so just track the last zoom value.
   void _onCameraMove(CameraPosition cameraPosition) {
-    _currentZoom = cameraPosition.zoom;
+    _bloc.dispatch(MapMovementStart(zoom: cameraPosition.zoom));
     
   }
 
   void _onCameraIdle() {
-    _bloc.dispatch(MapMovementStart(zoom: _currentZoom));
+    
   }
 
   void moveCameraToOurPosition() async {

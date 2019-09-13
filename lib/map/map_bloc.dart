@@ -62,14 +62,15 @@ class MapBloc extends Bloc<MapEvent, MapState> {
       yield MapMovementStopped();
     }
     if(event is MapMarkerTap) {
-      yield MapMarkerTapped();
+      yield MapMarkerTapped(zoom: event.addZoom);
     }
   }
 
-  MapBloc() : _mediaPool = LinkedHashMap<String, MapMarker>() {
-  }
+  MapBloc() : _mediaPool = LinkedHashMap<String, MapMarker>();
 
+  @override
   dispose() {
+    super.dispose();
     _cameraZoomSubscription.cancel();
 
     _markerController.close();
@@ -130,7 +131,7 @@ class MapBloc extends Bloc<MapEvent, MapState> {
           position: LatLng(feature.latitude, feature.longitude),
           infoWindow: feature.isCluster ? InfoWindow.noText : InfoWindow(title: feature.locationName),
           icon: bitmapDescriptor,
-          onTap: () {feature.isCluster ? _zoomCluster() : _getInfo();}
+          onTap: () {feature.isCluster ? MapMarkerTap(addZoom: 5.0) : _getInfo();}
          );
 
       markers.putIfAbsent(MarkerId(feature.markerId), () => marker);
@@ -138,10 +139,6 @@ class MapBloc extends Bloc<MapEvent, MapState> {
 
     // Publish markers to subscribers.
     addMarkers(markers);
-  }
-
-  void _zoomCluster() {
-    dispatch(MapMarkerTap(addZoom: 5.0));
   }
 
   void _getInfo()
